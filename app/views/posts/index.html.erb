@@ -1,5 +1,8 @@
+<div class="col-md-8">
 <% @posts.each do |post| %>
+  <ol class="post">
   <p><%= simple_format(post.message) %>
+  </ol>
      <sub>Posted on: <%= post.created_at.strftime("%d-%m-%Y") %></sub></p>
      <%= link_to "Delete", post, method: :delete,
                                        data: { confirm: "You sure?" } %>
@@ -8,3 +11,4 @@
 <%= link_to new_post_path do %>
   New post
 <% end %>
+</div>
