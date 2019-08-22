@@ -32,7 +32,6 @@ module Api::V1
             @user = User.find(session[:user_id])
             @post = @user.posts.create(post_params)
             @post.update_attributes(wall_id: session[:wall_id])
-            redirect_to request.referrer
             render json: @post, status: :created
         else
             flash[:danger] = 'You must be logged in to create a post!'
