@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 export class PostItem extends Component {
   render() {
-    const { id, username, message, created_at } = this.props.post;
+    const { id, username, message, created_at, user_id } = this.props.post;
     return (
       <div>
         <center><Card style={{ width: '18rem' }}>

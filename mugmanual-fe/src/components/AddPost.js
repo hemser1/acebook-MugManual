@@ -26,7 +26,7 @@ export class AddPost extends Component {
       <Form.Group controlId="exampleForm.ControlTextarea1">
         <Form.Control as="textarea" rows="3" type="text"
           name="message2"
-          placeholder="What's on your mind..."
+          placeholder="What's on your mind?"
            />
           <ButtonToolbar>
           <Button  name="message" onClick={this.onSubmit}
