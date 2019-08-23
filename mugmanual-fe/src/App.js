@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/layout/Header'
 import Posts from './components/Posts';
 import AddPost from './components/AddPost';
@@ -55,14 +56,20 @@ class App extends Component {
   render() {
     // console.log(this.state.posts)
     return (
+      <Router>
       <div>
-        <Header />
+      <Header/>
+        <Route exact path='/users_walls' component={() => {
+         window.location.href = 'http://localhost:3001/users';
+         return null;
+          }}/>
         <AddPost addPost={this.addPost.bind(this)}
                 updatePost={this.updatePost.bind(this)} />
         <Posts
         posts={this.state.posts}
         delPost={this.delPost}/>
       </div>
+      </Router>
     )
   }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
   <div>
   <header style={headerStyle}>
-    Home | Users
-  </header>
+  <Link to='users_walls'>User's Walls</Link>
+    </header>
   </div>
   );
 }
