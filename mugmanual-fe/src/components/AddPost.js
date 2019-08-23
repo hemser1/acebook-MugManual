@@ -12,7 +12,7 @@ export class AddPost extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     this.props.addPost(this.state.message);
-    this.setState({ message: '' });
+    document.getElementById('form').reset();
     this.props.updatePost()
   }
 
@@ -22,14 +22,14 @@ export class AddPost extends Component {
 
   render() {
     return (
-      <Form name="message" value={this.state.message} onChange={this.onChange}>
+      <Form id="form" name="message" value={this.state.message} onChange={this.onChange}>
       <Form.Group controlId="exampleForm.ControlTextarea1">
         <Form.Control as="textarea" rows="3" type="text"
           name="message2"
           placeholder="What's on your mind?"
            />
           <ButtonToolbar>
-          <Button  name="message" onClick={this.onSubmit}
+          <Button  name="message1" onClick={this.onSubmit}
           variant="primary" size="sm">
           Post
           </Button>

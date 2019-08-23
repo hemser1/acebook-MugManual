@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class PostsController < ApplicationController
   before_action :correct_user,   only: %i[destroy edit]
   include Response
