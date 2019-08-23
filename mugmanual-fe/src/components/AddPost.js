@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios';
 
 export class AddPost extends Component {
   state = {

@@ -9,20 +9,20 @@ export class PostItem extends Component {
     const { id, username, message, created_at, user_id } = this.props.post;
     return (
       <div>
-        <center><Card style={{ width: '18rem' }}>
-        <Card.Body>
-          <Card.Title>{username}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{created_at}</Card.Subtitle>
-          <Card.Text>
+        <Card style={cardStyle}>
+          <Card.Body>
+            <Card.Title>{username}</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">{created_at}</Card.Subtitle>
+            <Card.Text>
             {message}
-          </Card.Text>
-          <ButtonToolbar>
-          <Button variant="primary" size="sm" onClick={this.props.delPost.bind(this, id)}>
-          Delete
-          </Button>
-          </ButtonToolbar>
+            </Card.Text>
+            <ButtonToolbar>
+              <Button variant="primary" size="sm" onClick={this.props.delPost.bind(this, id)}>
+              Delete
+              </Button>
+            </ButtonToolbar>
           </Card.Body>
-        </Card></center><br></br>
+        </Card><br></br>
       </div>
     )
   }
@@ -33,4 +33,10 @@ PostItem.propTypes = {
   post: PropTypes.object.isRequired
 }
 
+const cardStyle = {
+  width: '70rem',
+  color: 'Black'
+}
+
 export default PostItem;
+

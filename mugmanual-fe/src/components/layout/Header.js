@@ -5,7 +5,8 @@ function Header() {
   return (
   <div>
   <header style={headerStyle}>
-  <Link to='users_walls'>User's Walls</Link>
+   <h2>MUGMANUAL</h2>
+  <Link style={linkStyle} to='/'>Home</Link> | <Link style={linkStyle} to='users_walls'>Users</Link>
     </header>
   </div>
   );
@@ -14,10 +15,15 @@ function Header() {
 export default Header;
 
 const headerStyle = {
-    padding: '1.5rem 2.5rem',
-    backgroundImage: 'linear-gradient(120deg, #2ddcfb 0%,#2d91fb 100%)',
+    padding: '0.0rem 2.5rem',
+    backgroundImage: 'linear-gradient(120deg, #000000 0%,#000000 100%)',
     margin: '0 0 2rem 0',
-    fontSize: '1.5rem',
-    color: 'Black',
-    textAlign: 'center',
+    fontSize: '1.0rem',
+    color: 'White',
+    textAlign: 'right',
+}
+
+const linkStyle = {
+  color: 'White',
+  textDecoration: 'highlight'
 }

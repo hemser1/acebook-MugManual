@@ -41,18 +41,6 @@ class App extends Component {
       })
   }
 
-  // // Add Post
-  // addPost = (message) => {
-  //   axios.post('http://localhost:3001/api/v1/posts', {post: {message: ''}})
-  //   .then(res => {
-  //     this.setState({ posts: [...this.state.posts, res.data] })
-  //   })
-  // }
-
-
-
-
-
   render() {
     // console.log(this.state.posts)
     return (
@@ -63,6 +51,10 @@ class App extends Component {
          window.location.href = 'http://localhost:3001/users';
          return null;
           }}/>
+
+          {/* <Route exact path="/" render={props => (
+            <Posts />
+          )} /> */}
         <AddPost addPost={this.addPost.bind(this)}
                 updatePost={this.updatePost.bind(this)} />
         <Posts
@@ -73,6 +65,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default App;
