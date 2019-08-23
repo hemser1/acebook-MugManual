@@ -52,9 +52,6 @@ class App extends Component {
          return null;
           }}/>
 
-          {/* <Route exact path="/" render={props => (
-            <Posts />
-          )} /> */}
         <AddPost addPost={this.addPost.bind(this)}
                 updatePost={this.updatePost.bind(this)} />
         <Posts
