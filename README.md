@@ -55,6 +55,5 @@ rails s -p 3001
 ```
 - if asked to run on a different local host when booting up the React server, simply type 'Y'
 
-
 ## Contribution
 If you would like to contribute to this project, please submit a pull request at our github page.
