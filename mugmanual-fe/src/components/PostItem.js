@@ -42,4 +42,3 @@ const cardStyle = {
 }
 
 export default PostItem;
-
