@@ -28,32 +28,18 @@ class App extends Component {
          })
      }
 
-     updatePost() {
-       axios.get('http://localhost:3001/api/v1/posts')
-       .then(res => this.setState({ posts: res.data}))
-     }
+  updatePost() {
+    axios.get('http://localhost:3001/api/v1/posts')
+    .then(res => this.setState({ posts: res.data}))
+  }
 
-  // Delete Post
   delPost = (id) => {
     axios.delete(`http://localhost:3001/api/v1/posts/${id}`).then(response => {
       this.setState({ posts: [...this.state.posts.filter(post => post.id !== id)]})
       })
   }
 
-  // // Add Post
-  // addPost = (message) => {
-  //   axios.post('http://localhost:3001/api/v1/posts', {post: {message: ''}})
-  //   .then(res => {
-  //     this.setState({ posts: [...this.state.posts, res.data] })
-  //   })
-  // }
-
-
-
-
-
   render() {
-    // console.log(this.state.posts)
     return (
       <div>
         <Header />
@@ -66,6 +52,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default App;
