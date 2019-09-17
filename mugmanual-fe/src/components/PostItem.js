@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
+import ReactTimeAgo from 'react-time-ago'
 
 export class PostItem extends Component {
   render() {
@@ -12,7 +13,6 @@ export class PostItem extends Component {
         <center><Card style={{ width: '18rem' }}>
         <Card.Body>
           <Card.Title>{username}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">{created_at}</Card.Subtitle>
           <Card.Text>
             {message}
           </Card.Text>
